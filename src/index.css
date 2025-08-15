@@ -62,7 +62,3 @@
   src: url("./assets/Fonts/Ubuntu_Sans_Mono/UbuntuSansMono-VariableFont_wght.ttf")
     format("truetype");
 }
-
-body {
-  background: #4c32c9;
-}

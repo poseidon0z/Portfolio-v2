@@ -10,8 +10,6 @@ function App() {
   return (
     <>
       <Navbar />
-      <h1 className="font-body text-heading-1">hi</h1>
-      <h1 className="font-heading">hi</h1>
       <Landing />
       <Experience />
       <LeaderTeamPlayer />
