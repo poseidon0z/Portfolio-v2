@@ -36,7 +36,7 @@ const BodyText = ({
 
   return (
     <p
-      className={`font-inter ${sizeClass} ${weightClass} ${lineHeightClass} ${className}`}
+      className={`font-body ${sizeClass} ${weightClass} ${lineHeightClass} ${className}`}
     >
       {children}
     </p>

@@ -1,4 +1,4 @@
-import Navbar from "./components/Navbar";
+import Navbar from "./components/General/Navbar";
 import Connect from "./pages/Connect";
 import Experience from "./pages/Experience";
 import Landing from "./pages/Landing";

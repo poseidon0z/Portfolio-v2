@@ -21,7 +21,7 @@ const Heading = ({ level, children, className = "" }: HeadingProps) => {
   const styleClass = headingConfig[level];
 
   return (
-    <Tag className={`font-ubuntu-mono font-bold ${styleClass} ${className}`}>
+    <Tag className={`font-heading font-bold ${styleClass} ${className}`}>
       {children}
     </Tag>
   );

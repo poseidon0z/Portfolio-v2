@@ -43,6 +43,17 @@
 
   --text-small: 14px;
   --text-small--line-height: calc(19.6 / 14); /* 1.4 */
+
+  /* == Animations == */
+  --animate-marquee: marquee 10s linear infinite;
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-25%);
+    }
+  }
 }
 
 @font-face {
