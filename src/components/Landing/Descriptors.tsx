@@ -1,6 +1,6 @@
-import React, { useState, useLayoutEffect } from "react";
-import Heading from "../General/Heading"; // Assuming these imports are correct
-import star from "../../assets/Star.svg";
+import React, { useState, useLayoutEffect } from 'react';
+import Heading from '../General/Heading'; // Assuming these imports are correct
+import star from '../../assets/Star.svg';
 
 // This hook calculates the screen's diagonal angle and updates on resize.
 const useDiagonalRotation = () => {
@@ -16,8 +16,8 @@ const useDiagonalRotation = () => {
     };
 
     calculateAngle();
-    window.addEventListener("resize", calculateAngle);
-    return () => window.removeEventListener("resize", calculateAngle);
+    window.addEventListener('resize', calculateAngle);
+    return () => window.removeEventListener('resize', calculateAngle);
   }, []);
 
   return angle;
@@ -26,11 +26,11 @@ const useDiagonalRotation = () => {
 const Descriptors: React.FC = () => {
   const angle = useDiagonalRotation();
   const descriptors = [
-    "Developer",
-    "Designer",
-    "Reader",
-    "Photographer",
-    "Writer",
+    'Developer',
+    'Designer',
+    'Reader',
+    'Photographer',
+    'Writer',
   ];
 
   const marqueeContent = descriptors.map((text, index) => (
@@ -48,12 +48,12 @@ const Descriptors: React.FC = () => {
         className="border-t-2 border-b-2 border-white py-2"
         style={{
           // This combination centers and rotates the element perfectly.
-          position: "absolute",
-          top: "50%",
-          left: "50%",
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
           transform: `translateX(-50%) translateY(-50%) rotate(-${angle}deg)`,
           // Needs to be extra wide to cover the corners when rotated.
-          minWidth: "200vw",
+          minWidth: '200vw',
         }}
       >
         <div className="flex w-max animate-marquee items-center gap-4">

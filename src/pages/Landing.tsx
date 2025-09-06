@@ -5,7 +5,7 @@ import me from '../assets/Me.png';
 
 const Landing: React.FC = () => {
   return (
-    <div className="h-screen flex flex-col bg-blurple">
+    <div className="h-[calc(100vh-64px)] flex flex-col bg-blurple relative overflow-hidden">
       {/* Offsetting the navbar */}
       <div className="min-h-16"></div>
 
