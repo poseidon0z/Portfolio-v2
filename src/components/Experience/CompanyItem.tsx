@@ -21,14 +21,20 @@ const CompanyItem: React.FC<{
   const rightSpan = Math.max(1, Math.floor(right));
   const total = leftSpan + rightSpan;
   // prefer an explicit total when it differs from default 8
-  const gridColsClass = total === 8 ? 'grid-cols-8' : `grid-cols-${total}`;
+  const gridColsClass = `grid-cols-${total}`;
+
   return (
     <div className="w-full">
       <div className={`grid ${gridColsClass}`}>
-        <div className={`col-span-${leftSpan}`}>
+        {/* Using style instead of tailwind class because it breaks for no reason otherwise */}
+        <div style={{ gridColumn: `span ${leftSpan}` }}>
           <img src={data.image} alt={data.company} className="w-full h-auto" />
         </div>
-        <div className={`col-span-${rightSpan}  text-left pl-4`}>
+        {/* Using style instead of tailwind class because it breaks for no reason otherwise */}
+        <div
+          style={{ gridColumn: `span ${rightSpan}` }}
+          className="text-left pl-4"
+        >
           <Heading level={6}>
             {data.heading}, {data.company}
           </Heading>
