@@ -222,7 +222,7 @@ const ProjectArchive: React.FC = () => {
       <button
         className="flex gap-2 p-3 px-8 border border-seaweed rounded-lg hover:bg-seaweed/10 transition w-fit"
         onClick={() => {
-          navigate('/project-archive');
+          navigate('/');
         }}
       >
         <BodyText size="medium" className="text-seaweed">
