@@ -15,6 +15,8 @@ import firebase from './Firebase.svg';
 import figma from './Figma.svg';
 import git from './Git.svg';
 import gitHub from './GitHub.svg';
+import gitHub_white from './GitHub_White.svg';
+import linkedIn from './Linkedin_White.svg';
 import go from './Go.svg';
 import heroku from './Heroku.svg';
 import hostinger from './Hostinger.svg';
@@ -25,6 +27,7 @@ import javascript from './JavaScript.svg';
 import kannada from './Kannada.svg';
 import linux from './Linux.svg';
 import machineLearning from './MachineLearning.svg';
+import mail from './Mail.svg';
 import mongoDB from './MongoDB.svg';
 import mySQL from './MySQL.svg';
 import nodejs from './NodeJS.svg';
@@ -55,6 +58,8 @@ export {
   figma,
   git,
   gitHub,
+  gitHub_white,
+  linkedIn,
   go,
   heroku,
   hostinger,
@@ -65,6 +70,7 @@ export {
   kannada,
   linux,
   machineLearning,
+  mail,
   mongoDB,
   mySQL,
   nodejs,
@@ -96,6 +102,8 @@ const logos = {
   figma,
   git,
   gitHub,
+  gitHub_white,
+  linkedIn,
   go,
   heroku,
   hostinger,
@@ -106,6 +114,7 @@ const logos = {
   kannada,
   linux,
   machineLearning,
+  mail,
   mongoDB,
   mySQL,
   nodejs,
