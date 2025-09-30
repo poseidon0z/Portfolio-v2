@@ -16,7 +16,7 @@ import figma from './Figma.svg';
 import git from './Git.svg';
 import gitHub from './GitHub.svg';
 import gitHub_white from './GitHub_White.svg';
-import linkedIn from './Linkedin_White.svg';
+import linkedIn from './LinkedIn_White.svg';
 import go from './Go.svg';
 import heroku from './Heroku.svg';
 import hostinger from './Hostinger.svg';
