@@ -5,6 +5,8 @@ import type { Project } from '../components/Projects/ProjectContainer';
 import Countdown from '../assets/Projects/Countdown Timer.gif';
 import TaleFlow from '../assets/Projects/Taleflow.gif';
 import SmartPlanner from '../assets/Projects/Smart Time Table.gif';
+import BodyText from '../components/General/BodyText';
+import { useNavigate } from 'react-router';
 
 const projects: Project[] = [
   {
@@ -34,8 +36,10 @@ const projects: Project[] = [
 ];
 
 const Projects: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="w-screen flex flex-col gap-16 px-8 pb-8 bg-blackish text-white">
+    <div className="w-screen flex flex-col items-center gap-16 px-8 pb-8 bg-blackish text-white">
       <Heading level={4} className="text-center pt-8">
         These are my projects
       </Heading>
@@ -43,6 +47,17 @@ const Projects: React.FC = () => {
       {projects.map((p, i) => (
         <ProjectContainer key={i} {...p} imageLeft={i % 2 == 0} />
       ))}
+
+      <button
+        className="flex gap-2 p-3 px-8 border border-seaweed rounded-lg hover:bg-seaweed/10 transition w-fit"
+        onClick={() => {
+          navigate('/project-archive');
+        }}
+      >
+        <BodyText size="medium" className="text-seaweed">
+          See More
+        </BodyText>
+      </button>
     </div>
   );
 };
