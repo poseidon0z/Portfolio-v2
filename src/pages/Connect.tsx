@@ -5,7 +5,10 @@ import { mail, gitHub_white, linkedIn } from '../assets/Logos';
 
 const Connect: React.FC = () => {
   return (
-    <div className="w-screen grid grid-cols-12 gap-6 px-8 pb-8 bg-blurple text-white">
+    <div
+      id="connect"
+      className="w-screen grid grid-cols-12 gap-6 px-8 pb-8 bg-blurple text-white"
+    >
       <Heading level={4} className="col-span-12 text-center pt-8">
         Let's connect!
       </Heading>
