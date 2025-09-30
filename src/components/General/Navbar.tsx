@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
     "relative after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-white after:-bottom-1 after:left-0 after:origin-center after:scale-x-0 after:transition-transform after:duration-300 after:ease-out group-hover:after:scale-x-100";
 
   return (
-    <div className="bg-blackish grid grid-cols-12 gap-4 h-16 w-screen px-8 text-white">
+    <div className="bg-blackish grid grid-cols-12 gap-4 h-16 w-screen px-8 text-white border-b-3 border-white border-dashed ">
       {/* Left side name and img */}
       <div className="col-span-2 flex items-center">
         <img src={favicon} className="h-12 w-12 mr-4" alt="Site favicon"></img>
