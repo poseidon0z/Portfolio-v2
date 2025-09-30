@@ -20,12 +20,13 @@ const CompanyItem: React.FC<{
   const leftSpan = Math.max(1, Math.floor(left));
   const rightSpan = Math.max(1, Math.floor(right));
   const total = leftSpan + rightSpan;
-  // prefer an explicit total when it differs from default 8
-  const gridColsClass = `grid-cols-${total}`;
 
   return (
     <div className="w-full">
-      <div className={`grid ${gridColsClass}`}>
+      <div
+        className={`grid`}
+        style={{ gridTemplateColumns: `repeat(${total}, minmax(0, 1fr))` }}
+      >
         {/* Using style instead of tailwind class because it breaks for no reason otherwise */}
         <div style={{ gridColumn: `span ${leftSpan}` }}>
           <img src={data.image} alt={data.company} className="w-full h-auto" />
