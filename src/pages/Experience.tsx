@@ -3,7 +3,7 @@ import Heading from '../components/General/Heading';
 import CompanyItem from '../components/Experience/CompanyItem';
 import Cisco from '../assets/Experience/Cisco.svg';
 import LaxmiElectronics from '../assets/Experience/LaxmiElectronics.png';
-import TATAElxsi from '../assets/Experience/TATAElxsi.png';
+import TATAElxsi from '../assets/Experience/TataElxsi.png';
 
 const experienceData = {
   1: {
