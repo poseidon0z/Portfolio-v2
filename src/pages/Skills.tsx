@@ -1,10 +1,286 @@
-import React from "react";
+import React from 'react';
+import Heading from '../components/General/Heading';
+import ImageWithCaption from '../components/General/ImageWithCaption';
+import logos from '../assets/Logos';
 
 const Skills: React.FC = () => {
   return (
-    <div>
-      <h1>Skills Page</h1>
-    </div>
+    <>
+      <div className="w-screen flex flex-col gap-16 px-8 bg-pinkish text-blackish">
+        <div className="flex flex-col gap-4">
+          <Heading level={4} className="text-center">
+            I do web dev
+          </Heading>
+          <div className="flex justify-center gap-4">
+            <ImageWithCaption
+              src={logos.expressJs}
+              alt="ExpressJS Logo"
+              caption="ExpressJS"
+            />
+            <ImageWithCaption src={logos.html} alt="HTML Logo" caption="HTML" />
+            <ImageWithCaption src={logos.css} alt="CSS Logo" caption="CSS" />
+            <ImageWithCaption
+              src={logos.javascript}
+              alt="JavaScript Logo"
+              caption="JavaScript"
+            />
+            <ImageWithCaption
+              src={logos.nodejs}
+              alt="NodeJS Logo"
+              caption="NodeJS"
+            />
+            <ImageWithCaption
+              src={logos.react}
+              alt="React Logo"
+              caption="React"
+            />
+            <ImageWithCaption
+              src={logos.typescript}
+              alt="TypeScript Logo"
+              caption="TypeScript"
+            />
+            <ImageWithCaption src={logos.php} alt="PHP Logo" caption="PHP" />
+            <ImageWithCaption
+              src={logos.tailwindCss}
+              alt="Tailwind CSS Logo"
+              caption="Tailwind"
+            />
+          </div>
+        </div>
+        <div className="flex justify-evenly">
+          <div className="flex flex-col gap-4">
+            <Heading level={4} className="text-center">
+              use databases,
+            </Heading>
+            <div className="flex justify-center gap-4">
+              <ImageWithCaption
+                src={logos.oracleXE}
+                alt="Oracle XE Logo"
+                caption="Oracle XE"
+              />
+              <ImageWithCaption
+                src={logos.mySQL}
+                alt="MySQL Logo"
+                caption="MySQL"
+              />
+              <ImageWithCaption
+                src={logos.mongoDB}
+                alt="MongoDB Logo"
+                caption="MongoDB"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col gap-4">
+            <Heading level={4} className="text-center">
+              and use version control
+            </Heading>
+            <div className="flex justify-center gap-4">
+              <ImageWithCaption src={logos.git} alt="Git Logo" caption="Git" />
+              <ImageWithCaption
+                src={logos.gitHub}
+                alt="GitHub Logo"
+                caption="GitHub"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-4">
+          <Heading level={4} className="text-center">
+            I know many languages
+          </Heading>
+          <div className="flex justify-evenly">
+            <div className="flex flex-col gap-4">
+              <Heading level={5} className="text-center">
+                some programming languages
+              </Heading>
+              <div className="flex justify-center gap-4">
+                <ImageWithCaption src={logos.c} alt="C Logo" caption="C" />
+                <ImageWithCaption
+                  src={logos.cpp}
+                  alt="C++ Logo"
+                  caption="C++"
+                />
+                <ImageWithCaption
+                  src={logos.python}
+                  alt="Python Logo"
+                  caption="Python"
+                />
+                <ImageWithCaption
+                  src={logos.javascript}
+                  alt="JS Logo"
+                  caption="JavaScript"
+                />
+                <ImageWithCaption src={logos.go} alt="Go Logo" caption="Go" />
+                <ImageWithCaption
+                  src={logos.java}
+                  alt="Java Logo"
+                  caption="Java"
+                />
+                <ImageWithCaption
+                  src={logos.typescript}
+                  alt="TS Logo"
+                  caption="TypeScript"
+                />
+                <ImageWithCaption
+                  src={logos.php}
+                  alt="PHP Logo"
+                  caption="PHP"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col gap-4">
+              <Heading level={5} className="text-center">
+                ...and some spoken languages.
+              </Heading>
+              <div className="flex justify-center gap-4">
+                <ImageWithCaption
+                  src={logos.english}
+                  alt="English Language Logo"
+                  caption="English"
+                />
+                <ImageWithCaption
+                  src={logos.hindi}
+                  alt="Hindi Language Logo"
+                  caption="Hindi"
+                />
+                <ImageWithCaption
+                  src={logos.tamil}
+                  alt="Tamil Language Logo"
+                  caption="Tamil"
+                />
+                <ImageWithCaption
+                  src={logos.kannada}
+                  alt="Kannada Language Logo"
+                  caption="Kannada"
+                />
+                <ImageWithCaption
+                  src={logos.hindi}
+                  alt="Konkani Language Logo"
+                  caption="Konkani"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-evenly">
+          <div className="flex flex-col gap-4">
+            <Heading level={4} className="text-center">
+              I do design
+            </Heading>
+            <div className="flex justify-center gap-4">
+              <ImageWithCaption
+                src={logos.figma}
+                alt="Figma Logo"
+                caption="Figma"
+              />
+              <ImageWithCaption
+                src={logos.blender}
+                alt="Blender Logo"
+                caption="Blender"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col gap-4">
+            <Heading level={4} className="text-center">
+              and AI/ML
+            </Heading>
+            <div className="flex justify-center gap-4">
+              <ImageWithCaption
+                src={logos.skLearn}
+                alt="Scikit-Learn Logo"
+                caption="Scikit-Learn"
+              />
+              <ImageWithCaption
+                src={logos.tensorflow}
+                alt="TensorFlow Logo"
+                caption="TensorFlow"
+              />
+              <ImageWithCaption
+                src={logos.machineLearning}
+                alt="LLMs logo"
+                caption="LLMs"
+              />
+              <ImageWithCaption src={logos.rag} alt="RAG Logo" caption="RAG" />
+            </div>
+          </div>
+          <div className="flex flex-col gap-4">
+            <Heading level={4} className="text-center">
+              across platforms.
+            </Heading>
+            <div className="flex justify-center gap-4">
+              <ImageWithCaption
+                src={logos.windows}
+                alt="Windows Logo"
+                caption="Windows"
+              />
+              <ImageWithCaption
+                src={logos.linux}
+                alt="Linux Logo"
+                caption="Linux"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-evenly">
+          <div className="flex flex-col gap-4">
+            <Heading level={4} className="text-center">
+              I containersize
+            </Heading>
+            <div className="flex justify-center gap-4">
+              <ImageWithCaption
+                src={logos.docker}
+                alt="Docker Logo"
+                caption="Docker"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col gap-4">
+            <Heading level={4} className="text-center">
+              and host projects on the web.
+            </Heading>
+            <div className="flex justify-center gap-4">
+              <ImageWithCaption src={logos.aws} alt="AWS Logo" caption="AWS" />
+              <ImageWithCaption
+                src={logos.firebase}
+                alt="Firebase Logo"
+                caption="Firebase"
+              />
+              <ImageWithCaption
+                src={logos.hostinger}
+                alt="Hostinger Logo"
+                caption="Hostinger"
+              />
+              <ImageWithCaption
+                src={logos.heroku}
+                alt="Heroku Logo"
+                caption="Heroku"
+              />
+              <ImageWithCaption
+                src={logos.vercel}
+                alt="Vercel Logo"
+                caption="Vercel"
+              />
+              <ImageWithCaption
+                src={logos.gitHub}
+                alt="GitHub Logo"
+                caption="GH Pages"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg id="visual" viewBox="0 0 1440 129">
+        <g transform="scale(1,-1) translate(0,-129)">
+          <rect x="0" y="0" width="1440" height="129" fill="#1e1926" />
+          <path
+            d="M0 63L40 55.2C80 47.3 160 31.7 240 26.3C320 21 400 26 480 37.7C560 49.3 640 67.7 720 70C800 72.3 880 58.7 960 55.2C1040 51.7 1120 58.3 1200 55.2C1280 52 1360 39 1400 32.5L1440 26L1440 130L1400 130C1360 130 1280 130 1200 130C1120 130 1040 130 960 130C880 130 800 130 720 130C640 130 560 130 480 130C400 130 320 130 240 130C160 130 80 130 40 130L0 130Z"
+            fill="#f9ebff"
+            stroke-linecap="round"
+            stroke-linejoin="miter"
+          ></path>
+        </g>
+      </svg>
+    </>
   );
 };
 
