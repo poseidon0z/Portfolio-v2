@@ -64,12 +64,14 @@ const ProjectContainer: React.FC<ProjectContainerProps> = ({
         ))}
       </div>
       {link && (
-        <button className="flex gap-2 p-2 border border-seaweed rounded-lg hover:bg-seaweed/10 transition w-fit">
-          <BodyText size="medium" className="text-seaweed">
-            Check it out
-          </BodyText>
-          <img src={LinkIcon} alt={`${title} link`} className="w-6 h-6" />
-        </button>
+        <a href={link}>
+          <button className="flex gap-2 p-2 border border-seaweed rounded-lg hover:bg-seaweed/10 transition w-fit">
+            <BodyText size="medium" className="text-seaweed">
+              Check it out
+            </BodyText>
+            <img src={LinkIcon} alt={`${title} link`} className="w-6 h-6" />
+          </button>
+        </a>
       )}
     </div>
   );
