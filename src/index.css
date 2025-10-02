@@ -13,43 +13,60 @@
 
   /* == Heading Text Styles == */
   --text-heading-1: 56px;
-  --text-heading-1--line-height: calc(61.6 / 56); /* 1.1 */
+  --text-heading-1--line-height: calc(61.6 / 56);
+  /* 1.1 */
 
   --text-heading-2: 48px;
-  --text-heading-2--line-height: calc(52.8 / 48); /* 1.1 */
+  --text-heading-2--line-height: calc(52.8 / 48);
+  /* 1.1 */
 
   --text-heading-3: 40px;
-  --text-heading-3--line-height: calc(44 / 40); /* 1.1 */
+  --text-heading-3--line-height: calc(44 / 40);
+  /* 1.1 */
 
   --text-heading-4: 32px;
-  --text-heading-4--line-height: calc(35.2 / 32); /* 1.1 */
+  --text-heading-4--line-height: calc(35.2 / 32);
+  /* 1.1 */
 
   --text-heading-5: 24px;
-  --text-heading-5--line-height: calc(26.4 / 24); /* 1.1 */
+  --text-heading-5--line-height: calc(26.4 / 24);
+  /* 1.1 */
 
   --text-heading-6: 20px;
-  --text-heading-6--line-height: calc(22 / 20); /* 1.1 */
+  --text-heading-6--line-height: calc(22 / 20);
+  /* 1.1 */
+
+  --text-heading-7: 16px;
+  --text-heading-7--line-height: calc(22 / 16);
+  /* 1.1 */
 
   /* == Body Text Styles == */
   --text-large: 20px;
-  --text-large--line-height: calc(28 / 20); /* 1.4 */
+  --text-large--line-height: calc(28 / 20);
+  /* 1.4 */
 
   --text-medium: 18px;
-  --text-medium--line-height: calc(25.2 / 18); /* 1.4 */
+  --text-medium--line-height: calc(25.2 / 18);
+  /* 1.4 */
 
   --text-normal: 16px;
-  --text-normal-regular--line-height: calc(22.4 / 16); /* 1.4 */
-  --text-normal-bold--line-height: calc(25.2 / 16); /* 1.575 */
+  --text-normal-regular--line-height: calc(22.4 / 16);
+  /* 1.4 */
+  --text-normal-bold--line-height: calc(25.2 / 16);
+  /* 1.575 */
 
   --text-small: 14px;
-  --text-small--line-height: calc(19.6 / 14); /* 1.4 */
+  --text-small--line-height: calc(19.6 / 14);
+  /* 1.4 */
 
   /* == Animations == */
   --animate-marquee: marquee 10s linear infinite;
+
   @keyframes marquee {
     0% {
       transform: translateX(0);
     }
+
     100% {
       transform: translateX(-25%);
     }
@@ -61,8 +78,7 @@
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url("./assets/Fonts/Inter/Inter-VariableFont_opsz,wght.ttf")
-    format("truetype");
+  src: url("./assets/Fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
 }
 
 @font-face {
@@ -70,6 +86,5 @@
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url("./assets/Fonts/Ubuntu_Sans_Mono/UbuntuSansMono-VariableFont_wght.ttf")
-    format("truetype");
+  src: url("./assets/Fonts/Ubuntu_Sans_Mono/UbuntuSansMono-VariableFont_wght.ttf") format("truetype");
 }

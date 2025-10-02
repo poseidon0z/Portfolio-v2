@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Heading from '../components/General/Heading';
 import link from '../assets/Link.svg';
 import BodyText from '../components/General/BodyText';
@@ -14,6 +14,17 @@ interface Project {
 
 const ProjectArchive: React.FC = () => {
   const navigate = useNavigate();
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const projects: Project[] = [
     {
@@ -172,7 +183,7 @@ const ProjectArchive: React.FC = () => {
     }
 
     return (
-      <div className="flex gap-2">
+      <div className="flex flex-wrap gap-2">
         {hasGithub && (
           <a href={project.github} className="flex gap-1 hover:underline ">
             Github
@@ -189,38 +200,73 @@ const ProjectArchive: React.FC = () => {
     );
   };
 
+  const getBestLink = (project: Project): string | null => {
+    if (project.livesite) return project.livesite;
+    if (project.github) return project.github;
+    return null;
+  };
+
+  const handleProjectClick = (project: Project) => {
+    const link = getBestLink(project);
+    if (link) {
+      window.open(link, '_blank');
+    }
+  };
+
   return (
-    <div className="w-screen min-h-screen flex flex-col items-center gap-16 px-8 pb-8 bg-blackish text-white">
+    <div className="w-screen min-h-screen flex flex-col items-center gap-8 md:gap-16 px-8 pb-8 bg-blackish text-white">
       <Heading level={4} className="text-center pt-8">
         Project Archive
       </Heading>
-      <div className="w-full grid grid-cols-12 gap-4">
+      <div className="w-full grid grid-cols-6 md:grid-cols-10 lg:grid-cols-12 gap-2 md:gap-4">
         {/* Header Row */}
         <div className="col-span-1 text-center">
           <Heading level={5}>Year</Heading>
         </div>
-        <div className="col-span-5">
+        <div className="col-span-5 md:col-span-5 lg:col-span-5">
           <Heading level={5}>Name of Project</Heading>
         </div>
-        <div className="col-span-4">
+        <div className="hidden md:block md:col-span-4 lg:col-span-4">
           <Heading level={5}>Tech Used</Heading>
         </div>
-        <div className="col-span-2">
+        <div className="hidden lg:block lg:col-span-2">
           <Heading level={5}>Link</Heading>
         </div>
 
         {/* Project Rows */}
-        {projects.map((project, index) => (
-          <React.Fragment key={index}>
-            <div className="col-span-1 py-2 text-center">{project.year}</div>
-            <div className="col-span-5 py-2">{project.name}</div>
-            <div className="col-span-4 py-2">{project.tech}</div>
-            <div className="col-span-2 py-2">{renderLinks(project)}</div>
-          </React.Fragment>
-        ))}
+        {projects.map((project, index) => {
+          const hasLink = getBestLink(project);
+          const isClickable = hasLink && windowWidth < 1024;
+
+          return (
+            <React.Fragment key={index}>
+              <div className="col-span-1 py-2 text-center">{project.year}</div>
+              <div
+                className={`col-span-5 md:col-span-5 lg:col-span-5 py-2 ${
+                  isClickable
+                    ? 'cursor-pointer hover:underline text-seaweed'
+                    : ''
+                }`}
+                onClick={() => {
+                  if (isClickable) {
+                    handleProjectClick(project);
+                  }
+                }}
+              >
+                {project.name}
+              </div>
+              <div className="hidden md:block md:col-span-4 lg:col-span-4 py-2">
+                {project.tech}
+              </div>
+              <div className="hidden lg:block lg:col-span-2 py-2">
+                {renderLinks(project)}
+              </div>
+            </React.Fragment>
+          );
+        })}
       </div>
       <button
-        className="flex gap-2 p-3 px-8 border border-seaweed rounded-lg hover:bg-seaweed/10 transition w-fit"
+        className="flex gap-2 p-2 lg:p-3 px-4 lg:px-8 border border-seaweed rounded-lg hover:bg-seaweed/10 transition w-fit"
         onClick={() => {
           navigate('/');
         }}
