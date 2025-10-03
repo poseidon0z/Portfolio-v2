@@ -11,7 +11,7 @@ const useDiagonalRotation = () => {
       const width = window.innerWidth;
       const height = window.innerHeight - 64;
       const radians = Math.atan2(height, width);
-      const degrees = radians * (180 / Math.PI);
+      const degrees = Math.min(40, radians * (180 / Math.PI));
       setAngle(degrees);
     };
 
@@ -35,10 +35,10 @@ const Descriptors: React.FC = () => {
 
   const marqueeContent = descriptors.map((text, index) => (
     <React.Fragment key={index}>
-      <Heading level={1} className="text-white shrink-0 whitespace-nowrap">
+      <Heading level={2} className="text-white shrink-0 whitespace-nowrap">
         {text}
       </Heading>
-      <img src={star} className="h-14 w-14 shrink-0" alt="" />
+      <img src={star} className="h-8 w-8 sm:h-14 sm:w-14 shrink-0" alt="" />
     </React.Fragment>
   ));
 
