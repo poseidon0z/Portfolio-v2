@@ -11,7 +11,7 @@ const Skills: React.FC = () => {
           <Heading level={4} className="text-center">
             I do web dev
           </Heading>
-          <div className="flex justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             <ImageWithCaption
               src={logos.expressJs}
               alt="ExpressJS Logo"
@@ -47,7 +47,7 @@ const Skills: React.FC = () => {
             />
           </div>
         </div>
-        <div className="flex justify-evenly">
+        <div className="flex flex-wrap gap-16 justify-evenly">
           <div className="flex flex-col gap-4">
             <Heading level={4} className="text-center">
               use databases,
@@ -88,12 +88,12 @@ const Skills: React.FC = () => {
           <Heading level={4} className="text-center">
             I know many languages
           </Heading>
-          <div className="flex justify-evenly">
-            <div className="flex flex-col gap-4">
+          <div className="flex flex-wrap gap-16 justify-evenly">
+            <div className="sm:flex-1 flex flex-col gap-4">
               <Heading level={5} className="text-center">
                 some programming languages
               </Heading>
-              <div className="flex justify-center gap-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 <ImageWithCaption src={logos.c} alt="C Logo" caption="C" />
                 <ImageWithCaption
                   src={logos.cpp}
@@ -128,11 +128,11 @@ const Skills: React.FC = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="sm:flex-1 flex flex-col gap-4">
               <Heading level={5} className="text-center">
                 ...and some spoken languages.
               </Heading>
-              <div className="flex justify-center gap-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 <ImageWithCaption
                   src={logos.english}
                   alt="English Language Logo"
@@ -162,12 +162,12 @@ const Skills: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-evenly">
+        <div className="flex flex-wrap gap-16 justify-evenly">
           <div className="flex flex-col gap-4">
             <Heading level={4} className="text-center">
               I do design
             </Heading>
-            <div className="flex justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4">
               <ImageWithCaption
                 src={logos.figma}
                 alt="Figma Logo"
@@ -184,7 +184,7 @@ const Skills: React.FC = () => {
             <Heading level={4} className="text-center">
               and AI/ML
             </Heading>
-            <div className="flex justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4">
               <ImageWithCaption
                 src={logos.skLearn}
                 alt="Scikit-Learn Logo"
@@ -207,7 +207,7 @@ const Skills: React.FC = () => {
             <Heading level={4} className="text-center">
               across platforms.
             </Heading>
-            <div className="flex justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4">
               <ImageWithCaption
                 src={logos.windows}
                 alt="Windows Logo"
@@ -220,11 +220,10 @@ const Skills: React.FC = () => {
               />
             </div>
           </div>
-        </div>
-        <div className="flex justify-evenly">
+
           <div className="flex flex-col gap-4">
             <Heading level={4} className="text-center">
-              I containersize
+              I containerize
             </Heading>
             <div className="flex justify-center gap-4">
               <ImageWithCaption
@@ -238,7 +237,7 @@ const Skills: React.FC = () => {
             <Heading level={4} className="text-center">
               and host projects on the web.
             </Heading>
-            <div className="flex justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4">
               <ImageWithCaption src={logos.aws} alt="AWS Logo" caption="AWS" />
               <ImageWithCaption
                 src={logos.firebase}
