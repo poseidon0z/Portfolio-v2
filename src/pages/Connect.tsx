@@ -1,6 +1,5 @@
 import React from 'react';
 import Heading from '../components/General/Heading';
-import ImageWithCaption from '../components/General/ImageWithCaption';
 import { mail, gitHub_white, linkedIn } from '../assets/Logos';
 
 const Connect: React.FC = () => {
