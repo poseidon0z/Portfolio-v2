@@ -272,7 +272,7 @@ const ProjectArchive: React.FC = () => {
         }}
       >
         <BodyText size="medium" className="text-seaweed">
-          See More
+          Go Back
         </BodyText>
       </button>
     </div>
