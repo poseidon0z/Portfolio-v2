@@ -37,11 +37,11 @@ const experienceData = {
 
 const Experience: React.FC = () => {
   return (
-    <div className="grid grid-cols-12 min-h-screen ">
-      <div className="col-span-4 h-full flex flex-col justify-center bg-blurple text-white pl-8 pr-4 text-center">
-        <Heading level={1}>I have professional experience</Heading>
+    <div className="grid grid-cols-12 min-h-screen">
+      <div className="col-span-12 md:col-span-4 h-full flex flex-col justify-center bg-blurple text-white px-4 md:pr-8 py-8 border-t-4 border-white border-dashed md:border-0 text-center">
+        <Heading level={2}>I have professional experience</Heading>
       </div>
-      <div className="col-span-8 h-full flex flex-col gap-16 justify-center bg-pinkish text-blackish pl-4 pr-8 text-center">
+      <div className="col-span-12 md:col-span-8 h-full flex flex-col gap-16 justify-center bg-pinkish text-blackish px-4 md:pr-8 py-8 text-center">
         {Object.values(experienceData).map((data, idx) => (
           <CompanyItem key={idx} data={data} />
         ))}

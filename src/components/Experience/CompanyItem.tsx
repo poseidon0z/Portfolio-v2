@@ -23,8 +23,33 @@ const CompanyItem: React.FC<{
 
   return (
     <div className="w-full">
+      {/* Mobile layout (below md) - stacked */}
+      <div className="md:hidden flex flex-col gap-4">
+        <div className="flex justify-start">
+          <img
+            src={data.image}
+            alt={data.company}
+            className="w-[100px] h-[100px] object-contain"
+          />
+        </div>
+        <div className="text-left">
+          <Heading level={6}>
+            {data.heading}, {data.company}
+          </Heading>
+          <BodyText size="small" weight="bold" className="pb-4">
+            {data.time}, {data.location}
+          </BodyText>
+          {data.description.split('\n').map((line, idx) => (
+            <BodyText size="medium" key={idx}>
+              {line}
+            </BodyText>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop layout (md and above) - side by side */}
       <div
-        className={`grid`}
+        className="hidden md:grid"
         style={{ gridTemplateColumns: `repeat(${total}, minmax(0, 1fr))` }}
       >
         {/* Using style instead of tailwind class because it breaks for no reason otherwise */}
