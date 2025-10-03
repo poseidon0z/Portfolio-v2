@@ -46,17 +46,6 @@ const Leader: React.FC = () => {
         </Heading>
         <CompanyItem data={experienceData[1]} left={1} right={11} />
       </div>
-      <svg id="visual" viewBox="0 0 1440 129">
-        <g transform="scale(1,-1) translate(0,-129)">
-          <rect x="0" y="0" width="1440" height="129" fill="#4c32c9" />
-          <path
-            d="M0 63L40 55.2C80 47.3 160 31.7 240 26.3C320 21 400 26 480 37.7C560 49.3 640 67.7 720 70C800 72.3 880 58.7 960 55.2C1040 51.7 1120 58.3 1200 55.2C1280 52 1360 39 1400 32.5L1440 26L1440 130L1400 130C1360 130 1280 130 1200 130C1120 130 1040 130 960 130C880 130 800 130 720 130C640 130 560 130 480 130C400 130 320 130 240 130C160 130 80 130 40 130L0 130Z"
-            fill="#1e1926"
-            stroke-linecap="round"
-            stroke-linejoin="miter"
-          ></path>
-        </g>
-      </svg>
     </>
   );
 };
