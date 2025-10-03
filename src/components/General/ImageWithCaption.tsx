@@ -12,7 +12,7 @@ const ImageWithCaption: React.FC<ImageWithCaptionProps> = ({
   alt,
   caption,
 }) => (
-  <div className="w-[100px] flex flex-col items-center gap-2">
+  <div className="w-16 md:w-[100px] flex flex-col items-center gap-2">
     <div className="w-full h-[70px]">
       <img src={src} alt={alt} className="w-full h-full object-contain" />
     </div>
