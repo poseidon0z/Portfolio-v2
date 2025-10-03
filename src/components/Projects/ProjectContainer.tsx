@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Heading from '../General/Heading';
 import BodyText from '../General/BodyText';
 import LinkIcon from '../../assets/Link.svg';
@@ -24,6 +24,17 @@ const ProjectContainer: React.FC<ProjectContainerProps> = ({
   alt = `${title} demo`,
   imageLeft = true,
 }) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const imageBlock = (
     <div className="col-span-6 p-4 border border-white rounded-2xl">
       <img
@@ -35,7 +46,7 @@ const ProjectContainer: React.FC<ProjectContainerProps> = ({
   );
 
   const contentBlock = (
-    <div className="col-span-6 flex flex-col gap-8 items-center">
+    <div className="col-span-6 flex flex-col gap-4 sm:gap-8 items-center">
       <Heading level={5} className="text-center">
         {title}
       </Heading>
@@ -77,16 +88,16 @@ const ProjectContainer: React.FC<ProjectContainerProps> = ({
   );
 
   return (
-    <article className="grid grid-cols-12 gap-6 w-full items-center">
-      {imageLeft ? (
+    <article className="grid grid-cols-4 md:grid-cols-12 gap-4 w-full items-center">
+      {!imageLeft && windowWidth > 768 ? (
         <>
-          {imageBlock}
           {contentBlock}
+          {imageBlock}
         </>
       ) : (
         <>
-          {contentBlock}
           {imageBlock}
+          {contentBlock}
         </>
       )}
     </article>
