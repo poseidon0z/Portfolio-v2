@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     const handleResize = () => {
       // Close mobile menu when resizing to desktop
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 640) {
         setIsMobileMenuOpen(false);
       }
     };
