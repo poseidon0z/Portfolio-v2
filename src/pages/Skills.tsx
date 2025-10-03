@@ -6,7 +6,7 @@ import logos from '../assets/Logos';
 const Skills: React.FC = () => {
   return (
     <>
-      <div className="w-screen flex flex-col gap-16 px-8 bg-pinkish text-blackish">
+      <div className="w-full flex flex-col gap-16 px-8 bg-pinkish text-blackish">
         <div className="flex flex-col gap-4">
           <Heading level={4} className="text-center">
             I do web dev

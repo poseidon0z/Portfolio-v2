@@ -6,7 +6,7 @@ const Connect: React.FC = () => {
   return (
     <div
       id="connect"
-      className="w-screen flex flex-col gap-4 px-4 md:px-8 pb-8 bg-blurple text-white"
+      className="w-full flex flex-col gap-4 px-4 md:px-8 pb-8 bg-blurple text-white"
     >
       <Heading
         level={4}

@@ -41,7 +41,7 @@ const Projects: React.FC = () => {
   return (
     <div
       id="projects"
-      className="w-screen min-h-screen flex flex-col items-center gap-16 px-4 sm:px-8 pb-8 bg-blackish text-white"
+      className="w-full min-h-screen flex flex-col items-center gap-16 px-4 sm:px-8 pb-8 bg-blackish text-white"
     >
       <Heading level={4} className="text-center pt-8">
         These are my projects

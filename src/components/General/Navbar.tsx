@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
   return (
     <div className="bg-blackish relative">
       {/* Main Navbar */}
-      <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4 h-16 w-screen px-8 text-white border-b-3 border-white border-dashed">
+      <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4 h-16 w-full px-8 text-white border-b-3 border-white border-dashed">
         {/* Left side name and img */}
         <div
           className="col-span-3 md:col-span-2 lg:col-span-2 flex items-center cursor-pointer"

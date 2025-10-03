@@ -214,7 +214,7 @@ const ProjectArchive: React.FC = () => {
   };
 
   return (
-    <div className="w-screen min-h-screen flex flex-col items-center gap-8 md:gap-16 px-8 pb-8 bg-blackish text-white">
+    <div className="w-full min-h-screen flex flex-col items-center gap-8 md:gap-16 px-8 pb-8 bg-blackish text-white">
       <Heading level={4} className="text-center pt-8">
         Project Archive
       </Heading>

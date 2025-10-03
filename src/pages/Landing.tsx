@@ -12,7 +12,7 @@ const Landing: React.FC = () => {
     >
       <Descriptors />
 
-      <div className="flex flex-col justify-between w-screen min-h-[500px] grow px-8 pb-8 pt-16 gap-4 items-center">
+      <div className="flex flex-col justify-between w-full min-h-[500px] grow px-8 pb-8 pt-16 gap-4 items-center">
         <div className="landing-text-box w-full flex flex-col">
           <div className="landing-text font-heading font-bold text-white leading-none">
             Hi!
