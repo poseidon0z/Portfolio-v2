@@ -5,44 +5,43 @@ import BodyText from '../components/General/BodyText';
 const LeaderTeamPlayer: React.FC = () => {
   return (
     <>
-      <div className="grid grid-cols-12 px-8 bg-blurple text-white gap-4">
-        <div className="col-span-12">
-          <Heading level={4} className="text-center">
-            and a team player
-          </Heading>
-        </div>
-        <div className="col-span-4"></div>
-        <div className="col-span-1 flex flex-col gap-2 items-center">
-          <Heading level={4} className="text-center">
-            8+
-          </Heading>
-          <BodyText size="small" weight="bold">
-            Hackathons
-          </BodyText>
-        </div>
-        <div className="col-span-1 flex flex-col gap-2 items-center">
-          <Heading level={4} className="text-center">
-            4+
-          </Heading>
-          <BodyText size="small" weight="bold">
-            Research Projects
-          </BodyText>
-        </div>
-        <div className="col-span-1 flex flex-col gap-2 items-center">
-          <Heading level={4} className="text-center">
-            10+
-          </Heading>
-          <BodyText size="small" weight="bold">
-            Academic Projects
-          </BodyText>
-        </div>
-        <div className="col-span-1 flex flex-col gap-2 items-center">
-          <Heading level={4} className="text-center">
-            3
-          </Heading>
-          <BodyText size="small" weight="bold">
-            Clubs
-          </BodyText>
+      <div className="flex flex-col px-4 sm:px-8 bg-blurple text-white gap-4">
+        <Heading level={4} className="text-center">
+          and a team player
+        </Heading>
+        <div className="w-full flex justify-center gap-2 sm:gap-4">
+          <div className="flex flex-col gap-2 items-center">
+            <Heading level={4} className="text-center">
+              8+
+            </Heading>
+            <BodyText size="small" weight="bold" className="text-center">
+              Hackathons
+            </BodyText>
+          </div>
+          <div className="flex flex-col gap-2 items-center">
+            <Heading level={4} className="text-center">
+              4+
+            </Heading>
+            <BodyText size="small" weight="bold" className="text-center">
+              Research Projects
+            </BodyText>
+          </div>
+          <div className="flex flex-col gap-2 items-center">
+            <Heading level={4} className="text-center">
+              10+
+            </Heading>
+            <BodyText size="small" weight="bold" className="text-center">
+              Academic Projects
+            </BodyText>
+          </div>
+          <div className="flex flex-col gap-2 items-center">
+            <Heading level={4} className="text-center">
+              3
+            </Heading>
+            <BodyText size="small" weight="bold" className="text-center">
+              Clubs
+            </BodyText>
+          </div>
         </div>
       </div>
       <svg id="visual" viewBox="0 0 1440 129">
