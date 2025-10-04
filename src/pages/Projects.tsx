@@ -64,7 +64,7 @@ const Projects: React.FC = () => {
         ))}
 
         <button
-          className="flex gap-2 p-3 px-8 border border-seaweed rounded-lg hover:bg-seaweed/10 transition w-fit"
+          className="flex gap-2 p-3 px-8 border border-seaweed rounded-lg hover:bg-seaweed/10 transition w-fit mb-16"
           onClick={() => {
             navigate('/project-archive');
           }}
