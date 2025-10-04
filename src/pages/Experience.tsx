@@ -48,7 +48,7 @@ const Experience: React.FC = () => {
       const adjustedScrollY = scrollY - minScroll;
 
       const maxScroll = vh; // 100vh
-      const maxShrink = window.innerWidth * 0.66;
+      const maxShrink = window.innerWidth * 0.75;
 
       if (adjustedScrollY < 0) {
         setScrollOffset(0);
