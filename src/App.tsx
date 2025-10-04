@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/project-archive" element={<ProjectArchive />} />
         <Route
-          path="/"
+          path="/*"
           element={
             <>
               <Landing />
