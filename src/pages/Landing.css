@@ -2,6 +2,9 @@
     font-size: 128px;
 }
 
+#root {
+    background-color: #f9ebff;
+}
 
 @media (max-width: 1000px) {
     .landing-text {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Heading from '../components/General/Heading';
 import CompanyItem from '../components/Experience/CompanyItem';
 import Cisco from '../assets/Experience/Cisco.svg';
@@ -36,15 +36,65 @@ const experienceData = {
 };
 
 const Experience: React.FC = () => {
+  const experienceContentRef = useRef<HTMLDivElement>(null);
+  const blurpleMarginRef = useRef<HTMLDivElement>(null);
+  const [scrollOffset, setScrollOffset] = useState<number>(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const vh = window.innerHeight;
+      const minScroll = vh * 2; // 200vh
+      const adjustedScrollY = scrollY - minScroll;
+
+      const maxScroll = vh; // 100vh
+      const maxShrink = window.innerWidth * 0.66;
+
+      if (adjustedScrollY < 0) {
+        setScrollOffset(0);
+      } else if (adjustedScrollY <= maxScroll) {
+        const progress = adjustedScrollY / maxScroll;
+        const shrinkAmount = progress * maxShrink;
+        setScrollOffset(shrinkAmount);
+      } else {
+        setScrollOffset(maxShrink);
+      }
+    };
+
+    handleScroll();
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="grid grid-cols-12 min-h-screen">
-      <div className="col-span-12 md:col-span-4 h-full flex flex-col justify-center bg-blurple text-white px-4 md:pr-8 py-8 border-t-4 border-white border-dashed md:border-0 text-center">
-        <Heading level={2}>I have professional experience</Heading>
-      </div>
-      <div className="col-span-12 md:col-span-8 h-full flex flex-col gap-16 justify-center bg-pinkish text-blackish px-4 md:pr-8 py-8 text-center">
-        {Object.values(experienceData).map((data, idx) => (
-          <CompanyItem key={idx} data={data} />
-        ))}
+    <div
+      id="experience-container"
+      className="bg-pinkish relative md:grid md:grid-cols-12"
+    >
+      <div
+        id="blurple-margin"
+        ref={blurpleMarginRef}
+        className="hidden md:block h-[200vh] bg-blurple absolute"
+        style={{ width: `calc(100% - ${scrollOffset}px)` }}
+      ></div>
+      <div className="hidden md:block col-span-12 md:col-span-4 h-[200vh] bg-blurple px-4 md:pr-8 py-8 border-t-4 border-white border-dashed md:border-0 text-center"></div>
+      <div
+        id="experience-content"
+        ref={experienceContentRef}
+        className="col-span-12 grid grid-cols-12 min-h-screen duration-100"
+      >
+        <div className="col-span-12 md:col-span-4 h-full flex flex-col justify-center bg-blurple text-white px-4 md:pr-8 py-8 border-t-4 border-white border-dashed md:border-0 text-center">
+          <Heading level={2}>I have professional experience</Heading>
+        </div>
+        <div className="col-span-12 md:col-span-8 h-full flex flex-col gap-16 justify-center bg-pinkish text-blackish px-4 md:pr-8 py-8 text-center">
+          {Object.values(experienceData).map((data, idx) => (
+            <CompanyItem key={idx} data={data} />
+          ))}
+        </div>
       </div>
     </div>
   );
