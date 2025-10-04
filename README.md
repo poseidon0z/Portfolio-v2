@@ -1,69 +1,126 @@
-# React + TypeScript + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. This project showcases a clean, professional design with smooth navigation and optimized performance.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Modern Tech Stack**: Built with React 19, TypeScript, and Tailwind CSS 4
+- **Responsive Design**: Fully responsive layout that works on all devices
+- **Multi-page Navigation**: Organized sections including Landing, Experience, Projects, Skills, and more
+- **Professional UI Components**: Reusable components for consistent design
+- **Type Safety**: Full TypeScript implementation for robust development
+- **Fast Performance**: Powered by Vite for lightning-fast development and builds
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend Framework**: React 19
+- **Build Tool**: Vite 7
+- **Styling**: Tailwind CSS 4
+- **Language**: TypeScript
+- **Routing**: React Router 7
+- **Linting**: ESLint 9
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js (version 18 or higher)
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd portfolio-website
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies:
+```bash
+npm install
 ```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint for code quality
+
+## Using as a Template
+
+This portfolio can be easily customized for your own use:
+
+### 1. Personal Information
+- Update content in `src/pages/` components with your information
+- Replace images in `src/assets/` with your own photos and logos
+- Modify the navigation structure in `src/App.tsx` if needed
+
+### 2. Styling Customization
+- Tailwind CSS configuration can be modified for your color scheme
+- Update component styles in respective `.tsx` files
+- Custom CSS can be added to `src/index.css`
+
+### 3. Content Structure
+- **Landing Page**: Main introduction and hero section
+- **Experience**: Professional work history and achievements
+- **Projects**: Showcase of your work with descriptions
+- **Skills**: Technical skills and competencies
+- **Connect**: Contact information and social links
+
+### 4. Assets Organization
+- `src/assets/Experience/` - Company logos and work-related images
+- `src/assets/Logos/` - Technology and skill icons
+- `src/assets/Projects/` - Project screenshots and demos
+- `src/assets/Fonts/` - Custom font files
+
+### 5. Component Structure
+- `src/components/General/` - Reusable UI components
+- `src/components/Experience/` - Experience-specific components
+- `src/components/Projects/` - Project-related components
+- `src/pages/` - Main page components
+
+## Deployment
+
+The project is configured for easy deployment on platforms like Vercel, Netlify, or any static hosting service.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist/` directory, ready for deployment.
+
+## Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+│   ├── General/        # Common components (Navbar, Heading, etc.)
+│   ├── Experience/     # Experience-specific components
+│   └── Projects/       # Project-related components
+├── pages/              # Main page components
+├── assets/             # Static assets (images, fonts, icons)
+├── context/            # React context providers
+└── hooks/              # Custom React hooks
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## License
+
+This project is open source and available under the MIT License.
