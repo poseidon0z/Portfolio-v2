@@ -132,7 +132,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-16 left-0 w-full bg-blackish border-b-3 border-white border-dashed z-50">
+        <div className="md:hidden absolute top-16 left-0 w-full bg-blackish border-b-3 border-white text-white border-dashed z-50">
           <div className="flex flex-col py-4 px-8 gap-4">
             <div
               className="cursor-pointer py-2 hover:text-seaweed transition-colors"
