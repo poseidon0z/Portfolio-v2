@@ -53,7 +53,7 @@ const Projects: React.FC = () => {
       </svg>
       <div
         id="projects"
-        className="w-full min-h-screen flex flex-col items-center gap-16 px-4 sm:px-8 pb-8 bg-blackish text-white"
+        className="w-full min-h-screen flex flex-col items-center gap-16 px-4 sm:px-8 pb-8 bg-blackish text-white py-12 sm:py-0"
       >
         <Heading level={4} className="text-center pt-8">
           These are my projects

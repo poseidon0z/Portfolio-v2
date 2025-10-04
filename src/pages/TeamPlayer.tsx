@@ -16,7 +16,7 @@ const LeaderTeamPlayer: React.FC = () => {
           ></path>
         </g>
       </svg>
-      <div className="flex flex-col px-4 sm:px-8 bg-blurple text-white gap-4">
+      <div className="flex flex-col px-4 sm:px-8 bg-blurple text-white gap-4 py-8 sm:py-0">
         <Heading level={4} className="text-center">
           and a team player
         </Heading>

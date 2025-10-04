@@ -40,7 +40,7 @@ const Leader: React.FC = () => {
           stroke-linejoin="miter"
         ></path>
       </svg>
-      <div className="bg-blackish text-seaweed px-8 flex flex-col gap-4">
+      <div className="bg-blackish text-seaweed px-8 flex flex-col gap-4 py-12 sm:py-0">
         <Heading level={4} className="text-center">
           I've been a leader
         </Heading>
